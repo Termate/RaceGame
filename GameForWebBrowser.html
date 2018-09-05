@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="GameForWebBrowser.css">
+    <title></title>
+  </head>
+  <body>
+    <div class="main" id='main'>
+      <div class="block Enter" id="1">
+        <p class="blockname" id="Enter">Enter</p>
+        <form id="formName">
+          <input id="inp" type="text" placeholder="Enter your name" required onclick="event.stopPropagation()"/>
+          <div id="nameButton"> OK </div>
+        </form>
+      </div>
+
+      <div class="block selectionCar" id="2">
+        <p class="blockname" id="selection">Choice of cars</p>
+        <div id="chooseCars" onclick="event.stopPropagation()">
+          <img id='strelka_vlevo' src="img/strelka_vlevo.png" alt="strelka_vlevo">
+          <img id='photoCar' alt="">
+          <img id='strelka_vpravo' src="img/strelka_vpravo.png" alt="strelka_vpravo">
+        </div>
+      </div>
+
+      <div class="block game" id="3">
+        <p class="blockname" id="gameP">Game</p>
+        <div id="elem2">
+          <div onclick="event.stopPropagation()">
+            <canvas id="canvas" width="1080 " height="1110"></canvas>
+            <img src="img/leftArrow.png" class = 'button' id="leftArrow" alt="">
+            <img src="img/rightArrow.png" class = 'button' id="rightArrow" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="block track" id="4">
+        <p class="blockname" id="trackP">Choice of tracks</p>
+        <div id="chooseTrack" onclick="event.stopPropagation()">
+          <img id='strelka_levo' src="img/strelka_vlevo.png" alt="strelka_vlevo">
+          <img id='photoTrack' alt="">
+          <img id='strelka_pravo' src="img/strelka_vpravo.png" alt="strelka_vpravo">
+        </div>
+      </div>
+
+      <div class="block speed" id="5">
+        <p class="blockname" id="speedP">Speed selection</p>
+        <div id="chooseSpeed" onclick="event.stopPropagation()">
+          <p class="selectedSp" id="selectSpeed"></p>
+          <div id="buttonSp" class='bu'>
+            <img id='fingerprint' src="img/fingerprintBlue2.png" alt="fingerprint">
+          </div>
+        </div>
+      </div>
+      <script src="GameForWebBrowser.js"></script>
+    </div>
+  </body>
+</html>
