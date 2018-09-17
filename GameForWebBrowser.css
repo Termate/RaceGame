@@ -4,8 +4,6 @@
 }
 
 .main {
-  /* min-height: 1980px; */
-  /* min-width: 1080px; */
   max-height: 1980px;
   max-width: 1080px;
   background-color: black;
@@ -13,7 +11,6 @@
 #main {
 }
 .block {
-  /* height: 384px; */
   width: 1080px;
   transition-duration: 2s;
   z-index: 2;
@@ -42,7 +39,7 @@
   position: relative;
   transition-duration: 2s;
 }
-#Enter {
+#EnterP {
   color: #EF476F;
   text-shadow: #83273D 5px 3px 6px;
 }
@@ -66,7 +63,7 @@
 /* ----------------- Enter Name ----------------------- */
 
 #formName {
-  opacity: 1;
+  opacity: 0;
   visibility: hidden;
   transition-property: opacity;
   transition-duration: 1s;
@@ -78,14 +75,14 @@
 
 #inp{
   background-color: #EF476F;
-  /* color: */
   margin-top: 200px;
   height: 100px;
-  width: 800px;
+  width: 870px;
   font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: 70pt;
   font-weight: bold;
   font-style: italic;
+  border-radius: 10px;
 }
 
 #nameButton{
@@ -98,13 +95,14 @@
     font-size: 70pt;
     font-weight: bold;
     font-style: italic;
-    box-shadow: 10px 15px 20px 10px rgba(244,137,163,0.7);
+    box-shadow: 7px 10px 15px 5px rgba(244,137,163,0.7);
+    border-radius: 10px;
 }
 
 /* -----------------Choose car----------------------- */
 
 #chooseCars {
-  opacity: 1;
+  opacity: 0;
   visibility: hidden;
   transition-property: opacity;
   transition-duration: 1s;

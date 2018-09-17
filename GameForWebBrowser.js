@@ -1,7 +1,5 @@
 var roadGame = (function(){
 
-
-
   var block = document.getElementsByClassName("block");
   var blockName = document.getElementsByClassName("blockname");
   var divs = document.getElementsByTagName("div");
@@ -14,6 +12,13 @@ var roadGame = (function(){
   var chooseTrack = document.getElementById("chooseTrack");
   var chooseSpeed = document.getElementById("chooseSpeed");
   var main = document.getElementById("main");
+
+  var EnterP = document.getElementById("EnterP")
+  var gameP = document.getElementById("gameP")
+  var selectionP = document.getElementById("selection")
+  var trackP = document.getElementById("trackP")
+  var speedP = document.getElementById("speedP")
+
   var chosenCar;
   var selection = false;
   var animation = false;
@@ -23,13 +28,17 @@ var roadGame = (function(){
   var numeric = [];
 
   var clientHeight = document.documentElement.clientHeight;
-  // var clientHeight = document.documentElement.clientHeight;
   var res = clientHeight / 5;
+  var PercentOfPadding = (res)-(res/100*75)+"px";
 
   var firstSyle = (function() {
     for (var i = 0; i < block.length; i++) {
-      blockName[i].style.paddingTop = "12%";
       block[i].style.height = res + "px";
+      EnterP.style.paddingTop = PercentOfPadding;
+      gameP.style.paddingTop = PercentOfPadding;
+      selectionP.style.paddingTop = PercentOfPadding;
+      trackP.style.paddingTop = PercentOfPadding;
+      speedP.style.paddingTop = PercentOfPadding;
       main.style.position = "fixed";
     }
   })();
@@ -113,7 +122,6 @@ var roadGame = (function(){
       }
       for (var i = 0; i < block.length; i++) {
         block[numeric[i]].style.height = res + "px";
-        blockName[numeric[i]].style.paddingTop = "12%";
         chooseCars.style.opacity = "0";
         chooseCars.style.visibility = "hidden";
         chooseTrack.style.opacity = "0";
@@ -122,9 +130,14 @@ var roadGame = (function(){
         chooseSpeed.style.visibility = "hidden";
         elem2.style.opacity = "0";
         elem2.style.visibility = "hidden";
-        formName.style.visibility = "hidden";
         formName.style.opacity = "0";
+        formName.style.visibility = "hidden";
         main.style.position = "fixed";
+        EnterP.style.paddingTop = PercentOfPadding;
+        gameP.style.paddingTop = PercentOfPadding;
+        selectionP.style.paddingTop = PercentOfPadding;
+        trackP.style.paddingTop = PercentOfPadding;
+        speedP.style.paddingTop = PercentOfPadding;
         selection = false;
         animation = true;
         chCar = true;
@@ -366,7 +379,7 @@ var roadGame = (function(){
             xi: 0,
             yi: -cvs.height
           });
-          if (moveRoad.length > 1) {
+          if (moveRoad.length > 2) {
             moveRoad.shift();
           }
         }
@@ -384,7 +397,6 @@ var roadGame = (function(){
             y: -cvs.height
           });
         }
-        console.log(lane);
 
         //check for collision
         if (traffic.length > 2) {
